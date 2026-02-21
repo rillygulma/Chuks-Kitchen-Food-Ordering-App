@@ -69,7 +69,7 @@ export default function SignInPage() {
             {/* Email */}
             <div className="relative">
               <label className="text-sm font-medium">Email or phone number</label>
-              <MdEmail className="absolute left-3 mt-6 -translate-y-1/2 text-gray-400 text-lg" />
+              <MdEmail className="absolute left-3 mt-6 -translate-y-1/2 text-gray-700 text-lg" />
               <input
                 type="email"
                 value={email}
@@ -83,7 +83,7 @@ export default function SignInPage() {
             {/* Password */}
             <div className="relative">
               <label className="text-sm font-medium">Password</label>
-              <MdLock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg" />
+              <MdLock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-700 text-lg" />
               <input
                 type={showPassword ? "text" : "password"}
                 value={password}
@@ -94,7 +94,7 @@ export default function SignInPage() {
               />
               <span
                 onClick={togglePasswordVisibility}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer text-lg"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-700 cursor-pointer text-lg"
               >
                 {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
               </span>

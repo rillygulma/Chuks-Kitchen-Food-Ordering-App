@@ -13,6 +13,7 @@ import {
 } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
+import Link from "next/link";
 
 const islandMoments = Island_Moments({
   subsets: ["latin"],
@@ -71,7 +72,7 @@ export default function SignUpPage() {
             <div>
               <label className="text-xs text-gray-600">Email</label>
               <div className="relative mt-1">
-                <FiMail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                <FiMail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-700" />
 
                 <input
                   type="email"
@@ -85,7 +86,7 @@ export default function SignUpPage() {
             <div>
               <label className="text-xs text-gray-600">Phone number</label>
               <div className="relative mt-1">
-                <FiPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                <FiPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-700" />
 
                 <input
                   type="tel"
@@ -99,7 +100,7 @@ export default function SignUpPage() {
             <div>
               <label className="text-xs text-gray-600">Password</label>
               <div className="relative mt-1">
-                <FiLock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                <FiLock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-700" />
 
                 <input
                   type={showPassword ? "text" : "password"}
@@ -110,7 +111,7 @@ export default function SignUpPage() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-700"
                 >
                   {showPassword ? <FiEyeOff /> : <FiEye />}
                 </button>
@@ -121,7 +122,7 @@ export default function SignUpPage() {
             <div>
               <label className="text-xs text-gray-600">Confirm password</label>
               <div className="relative mt-1">
-                <FiLock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                <FiLock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-700" />
 
                 <input
                   type={showConfirmPassword ? "text" : "password"}
@@ -134,7 +135,7 @@ export default function SignUpPage() {
                   onClick={() =>
                     setShowConfirmPassword(!showConfirmPassword)
                   }
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-700"
                 >
                   {showConfirmPassword ? <FiEyeOff /> : <FiEye />}
                 </button>
@@ -189,7 +190,7 @@ export default function SignUpPage() {
             <p className="text-center text-xs text-gray-500">
               Already have an account?{" "}
               <span className="text-blue-600 cursor-pointer">
-                Sign In
+                <Link href="/signin">Sign In</Link>
               </span>
             </p>
           </form>
